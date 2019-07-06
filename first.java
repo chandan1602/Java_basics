@@ -257,80 +257,30 @@ Exception occured during command line arguemnts
 
 // 		System.out.print("Hello "+Name+" \nYour age is: "+age+"\nYour Percentage is: "+per);
 		
-// 	}
+// }
 
 // }
-class FirstDemo
+
+
+class first
 {
 	public static void main(String ar[])
 	{
 		String name;
 		int age;
 		float per;
+		int roll;
 
 		name=ar[0];
 		age=Integer.parseInt(ar[1]);
-		per=Float.parseFloat(ar[2]);
+		roll=Integer.parseInt(ar[2]);
+		per=Float.parseFloat(ar[3]);
 		
-		System.out.println("Name is :"+name);
+ 		System.out.println("Name is :"+name);
 		System.out.println("Age is :"+age);
+		System.out.println("Roll number is :" + roll);
 		System.out.println("Percentage marks  is :"+per);
 	}
 }
-
-
-        
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
