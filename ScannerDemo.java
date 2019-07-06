@@ -136,29 +136,80 @@ class  ScannerDemo
             1)even/odd : if even then return 1 otherwise 0...................."even"  
             2)greatest among three numbers
 */
+
+
+//----------------------------------------------------------------------------------
 //step 1
+// import java.util.Scanner;
+// class  ScannerDemo
+// {
+//     public static void main(String ar[])
+//     {
+//         //step 2
+//         Scanner sc=new Scanner(System.in);
+
+//         String name;
+//         int age;
+
+//         //step 3
+//         System.out.print("Enter Name:" );
+//         name=sc.next();
+//         System.out.print("Enter Age:" );
+//         age=sc.nextInt();
+
+
+//         System.out.print("\nName is :"+name+"\nage is :"+age);
+
+        
+//     }
+
+// }
+//------------------------------------------------------------------------------------
+
 import java.util.Scanner;
-class  ScannerDemo
+class ScannerDemo
 {
     public static void main(String ar[])
     {
-        //step 2
         Scanner sc=new Scanner(System.in);
+        /*
+        //Swapping of two numbers using 3rd variable
+        int num1, num2, temp;
+        System.out.print("Enter 1st number : ");
+        num1=sc.nextInt();
+        System.out.print("Enter 2nd number : ");
+        num2=sc.nextInt();
+        temp = num1;
+        num1 = num2;
+        num2 = temp;
+        System.out.println("------After Swapping--------");
+        System.out.println("1st number : "+num1);
+        System.out.println("2nd number : "+num2);
+        //Swapping of two numbers without using 3rd variable
+        num1=num1+num2;//2=2+3=5
+        num2=num1-num2;//3=5-3=2
+        num1=num1-num2;//5=5-2=3
+        System.out.println("------After Swapping Again--------");
+        System.out.println("1st number : "+num1);
+        System.out.println("2nd number : "+num2);
+        */
 
-        String name;
-        int age;
+        //Even/Odd
+        int a,b,c;
 
-        //step 3
-        System.out.print("Enter Name:" );
-        name=sc.next();
-        System.out.print("Enter Age:" );
-        age=sc.nextInt();
-
-
-        System.out.print("\nName is :"+name+"\nage is :"+age);
+        System.out.print("Enter a number : ");
+        a=sc.nextInt();
+        String res=a%2==0?"The number entered is Even":"The number Entered is odd";
+        System.out.println(res);
         
+        //Greatest among three
+         System.out.print("Enter the numbers you want to compare: ");
+         a=sc.nextInt();
+         b=sc.nextInt();
+         c=sc.nextInt();
+         String greatest = a>b?(a>c?"a is greatest":"c is greatest"):(b>c?"b is greatest":"c is greatest");
+         System.out.println(greatest);
     }
-
 }
 
 

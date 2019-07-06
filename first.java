@@ -280,6 +280,8 @@ class first
 		System.out.println("Age is :"+age);
 		System.out.println("Roll number is :" + roll);
 		System.out.println("Percentage marks  is :"+per);
+
+		
 	}
 }
 
