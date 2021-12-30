@@ -1,0 +1,39 @@
+package learningpart3;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+
+/*
+ * 
+ * Popular perception : Non Blocking IO
+ * Classic meaning: Networking IO
+ * 
+ * Package created is java.nio
+ * -Purpose of package is to support IO in multi-threading and non-blocking
+ * 
+ * -Some concepts are:
+ * Buffers:
+ 	-read operation: from channel into the buffer
+ 	-write operation: from buffer into the channel
+ 	
+ 	1. Buffers are containers for data
+ 		Channels are basically like wires, represents connections to
+ 		the entities capable of performing IO operations 
+ 		
+ 	2. popular ops:
+ 		a. read() : for reading contents(bytes) from file
+ 		b. flip() : ready for a new sequence of channel-write
+ 		
+ */
+
+public class NIO {
+	public static void main(String[] args) throws IOException {
+		FileInputStream fin = new FileInputStream("F:\\java\\Java_Crash_Course_By_Simplilearn\\learning\\files\\src.txt");
+		FileChannel readChannel = fin.getChannel();
+		ByteBuffer readBuffer = ByteBuffer.allocate(1024);
+		int result = readChannel.read(readBuffer);
+		System.out.println("file read successfully "+result);
+	}
+}

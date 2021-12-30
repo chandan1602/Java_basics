@@ -1,0 +1,17 @@
+package learningpart2;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class ConcurrencyDemoPart2FutureClass {
+	public static void main(String[] args) {
+		ExecutorService executorService = Executors.newSingleThreadExecutor();
+		
+		Future<String> future = executorService.submit(() -> {
+			Thread.sleep(10000);
+			return "Completed";
+		});
+		
+		
+	}
+}

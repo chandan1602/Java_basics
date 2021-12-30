@@ -1,0 +1,16 @@
+package learningpart2;
+
+public class StringHandling {
+	public static void main(String[] args) {
+		String s1 = "John is studying";
+		String s2 = "in college";
+		
+		System.out.println(s1.length());
+		
+		String result = s1.concat(s2);
+		System.out.println(result);
+		
+		String.format("The name of the student is " + "%s, and the age is " + "variable is %d,", "John", 21);
+		
+	}
+}

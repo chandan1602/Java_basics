@@ -1,0 +1,22 @@
+package learning;
+
+class A {
+	public void show() {
+		System.out.println("A");
+	}
+}
+
+class B extends A {
+	public void show() {
+		System.out.println("B");
+	}
+}
+
+public class Annotations {
+	public static void main(String args[]) {
+		B obj = new A();
+		obj.show();
+		B obj2 = new B();
+		obj2.show(); //OverRiding by B
+	}
+}

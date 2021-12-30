@@ -1,0 +1,11 @@
+package learningpart2;
+
+//java.lang is by default imported
+//-e.g. String is the part of java.lang package and is by default imported
+
+
+public class LangAndUtilPackages {
+	public static void main(String[] args) {
+		//Theoretical
+	}
+}

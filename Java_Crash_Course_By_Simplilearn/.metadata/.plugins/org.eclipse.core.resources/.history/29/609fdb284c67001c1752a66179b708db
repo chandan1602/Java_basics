@@ -1,0 +1,23 @@
+package learningpart2;
+
+/*
+ * package used : java.util.concurrent
+ * -contains locks, atomic packages, executors
+ * 
+ * Some interesting classes are:
+ * 1. Executors:
+ * 	-interface for defining thread-like subsystems,
+ * 	-including thread pools, async IO, lightweight task frameworks.
+ * 
+ * 2. ExecutorService:
+ * 	-more complete async task execution framework
+ * 
+ * 3. Future:
+ * 	-fetch the results of submitted task
+ */
+
+
+
+public class ConcurrencyDemo {
+	
+}

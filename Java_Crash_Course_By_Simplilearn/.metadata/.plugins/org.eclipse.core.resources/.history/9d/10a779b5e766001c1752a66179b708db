@@ -1,0 +1,26 @@
+package learningpart2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/*
+ * 
+ */
+
+
+
+
+public class Generics {
+	public static void main(String[] args) {
+		//Without Generics
+		List list = new ArrayList();
+		list.add("hello");
+		String s = (String) list.get(0);
+		System.out.println(s);
+		
+		//With Generics
+		List<String> glist = new ArrayList<String>();
+		list.add("hello generics");
+		String s = list.get(0);
+	}
+}

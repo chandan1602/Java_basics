@@ -1,4 +1,4 @@
-# Java_basics
+# Java_basics Directory
 Sequence Of Learning:
 1. First.java
 2. Scannerdemo.java

@@ -1,0 +1,21 @@
+/*
+ * SERIALIZATION
+ * -Conversion of state of object into byte stream
+ * DE-SERIALIZATION
+ * -Conversion of byte stream back to object
+ * 
+ *----Implementation
+ *Serializable interface has to be implemented using 'implements'
+ */
+
+package learning;
+
+import java.io.Serializable;
+
+public class Serialization implements Serializable {
+	private static final long serialVersionUID = 1L;
+	transient int x; //This variable will not be Serialised
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	}
+}

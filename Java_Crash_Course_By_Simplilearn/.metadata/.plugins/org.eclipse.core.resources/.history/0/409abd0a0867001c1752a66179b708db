@@ -1,0 +1,15 @@
+package learningpart2;
+
+import java.net.Inet4Address;
+import java.net.InetAddress;
+import java.util.Arrays;
+
+public class Networking {
+	public static void main(String[] args) {
+		String url = "www.platformtechs.in";
+		InetAddress inetAddress = Inet4Address.getByName(url);
+		
+		System.out.println("Address : " + Arrays.toString(inetAddress.getAddress()));
+		
+	}
+}

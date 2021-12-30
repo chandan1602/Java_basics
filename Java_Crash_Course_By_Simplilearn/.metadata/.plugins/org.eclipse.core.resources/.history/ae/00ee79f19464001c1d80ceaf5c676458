@@ -1,0 +1,58 @@
+package learning;
+
+class MathOperation {
+	void getMultiples(int n) {
+		for (int i=0; i<=5; i++) {
+			System.out.println(n*i);
+		try {
+			Thread.sleep(400);
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+		}
+	}
+}
+
+class Thread1 extends Thread{
+	MathOperation mo;
+	public Thread1(MathOperation mo) {
+		this.mo = mo;
+	}
+	public void run() {
+		try {
+			mo.getMultiples(2);
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+	}
+}
+
+class Thread2 implements Runnable{
+	MathOperation mo;
+	public Thread2(MathOperation mo) {
+		this.mo = mo;
+	}
+	public void run() {
+		try {
+			mo.getMultiples(3);
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+	}
+}
+
+
+
+public class MultithreadingPart2Synchronization {
+	public static void main(String[] args) {
+		MathOperation obj = new MathOperation();
+		
+		Thread1 t1 = new Thread1(obj);
+		Thread t2 = new Thread(new Thread2(obj));
+		t1.start();
+		t2.start();
+	}
+}

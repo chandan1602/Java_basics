@@ -1,0 +1,102 @@
+/*
+ * ANNOTATIONS
+ * 
+ *  -start with @
+ *  -act like comments, do not change the action of a program
+ *  -not pure comments as they can change the way a program 
+ *   is treated by the COMPILER
+ *  -two types
+ *       1. In-Built
+ *       2. Custom 
+ */
+
+
+
+
+package learning;
+
+import java.lang.annotation.Annotation;
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+
+class A {
+	public void show() {
+		System.out.println("A");
+	}
+}
+
+/////-------IN BUILT ANNOTATIONS------
+
+
+/*@FunctionalInterface //To specify that the interface can only have one function 
+ * interface ABC {
+ * 	void show();
+ * }
+ */
+class B extends A {
+	@Override //For compile time so that errors be caught
+	@Deprecated //To specify that the method is available to use but is depricated
+	public void show() {
+		System.out.println("B");
+	}
+}
+
+
+/////------CUSTOM ANNOTATIONS--------
+
+
+//Marker Annotation -> Annotation with no value
+@Documented
+@interface SmartPhone {
+	
+}
+
+//Single Valued Annotation
+@Inherited //Specify that it can be inherited.
+@interface WindowsPhone {
+	String os();
+}
+
+//Multiple Valued Annotation
+
+//2 Meta Annotations mandatory
+@Target(ElementType.TYPE) //On which level an annotation will work: class(TYPE), method(METHOD), constructor(CONSTRUCTOR) level 
+@Retention(RetentionPolicy.RUNTIME) //At what point do we want the annotation: till source not in compiled time(SOURCE), class(CLASS), runtime(RUNTIME)
+@interface AndroidPhone {
+	String os();
+	int version();
+	String name() default "Samsung";
+}
+
+@AndroidPhone(os="Android",version=11)
+class NokiaASeries {
+	String model;
+	int size;
+	public NokiaASeries(String model, int size) {
+		this.model = model;
+		this.size = size;
+	}
+}
+
+
+public class Annotations {
+	@SuppressWarnings("unchecked")
+	public static void main(String args[]) {
+		A obj = new A();
+		obj.show();
+		B obj2 = new B();
+		obj2.show(); //OverRiding by B		
+		
+		//Using Custom Annotation
+		NokiaASeries n1 = new NokiaASeries("Galtrix", 9);
+		Class c = n1.getClass();
+		Annotation an = c.getAnnotation(AndroidPhone.class);
+		AndroidPhone a = (AndroidPhone)an;
+		System.out.println(a.os());
+	}
+}

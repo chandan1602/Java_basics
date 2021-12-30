@@ -1,0 +1,23 @@
+Enumeration in Java
+Annotations in Java
+Serialization in Java
+Multithreading in Java
+Synchronization in Java
+Autoboxing in Java
+I/O Streams in Java
+
+Java Database Connections(JDBC)
+Generics in Java
+String Handling in Java
+java.Lang and java.Util
+Networking in Java
+Images in Java
+Concurrency Utilities
+
+Regular Expressions in Java
+Non-Blocking Input/Output in Java
+Java Beans
+Spring framework
+Spring MVC
+Spring and REST APIs
+Spring Boot Project

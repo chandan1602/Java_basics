@@ -1,0 +1,10 @@
+package learningpart2;
+
+public class StringHandling {
+	public static void main(String[] args) {
+		String s1 = "John is studying";
+		String s2 = "in college";
+		
+		System.out.println(str1.length());
+	}
+}

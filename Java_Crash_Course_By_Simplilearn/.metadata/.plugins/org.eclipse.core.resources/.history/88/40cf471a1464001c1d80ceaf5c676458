@@ -1,0 +1,76 @@
+/*
+ * ANNOTATIONS
+ * 
+ *  -start with @
+ *  -act like comments, do not change the action of a program
+ *  -not pure comments as they can change the way a program 
+ *   is treated by the COMPILER
+ *  -two types
+ *       1. In-Built
+ *       2. Custom 
+ */
+
+
+
+
+package learning;
+
+class A {
+	public void show() {
+		System.out.println("A");
+	}
+}
+
+/////-------IN BUILT ANNOTATIONS------
+
+
+/*@FunctionalInterface //To specify that the interface can only have one function 
+ * interface ABC {
+ * 	void show();
+ * }
+ */
+
+class B extends A {
+	@Override //For compile time so that errors be caught
+	@Deprecated //To specify that the method is available to use but is depricated
+	public void show() {
+		System.out.println("B");
+	}
+}
+
+
+/////------CUSTOM ANNOTATIONS--------
+
+
+//Marker Annotation -> Annotation with no value
+
+@interface SmartPhone {
+	
+}
+
+//Single Valued Annotation
+@interface WindowsPhone {
+	String os();
+}
+
+//Multiple Valued Annotation
+@interface AndroidPhone {
+	String os();
+	int version();
+	String name() default "Samsung";
+}
+
+@SmartPhone
+class NokiaASeries {
+	
+}
+
+
+public class Annotations {
+	public static void main(String args[]) {
+		A obj = new A();
+		obj.show();
+		B obj2 = new B();
+		obj2.show(); //OverRiding by B		
+	}
+}

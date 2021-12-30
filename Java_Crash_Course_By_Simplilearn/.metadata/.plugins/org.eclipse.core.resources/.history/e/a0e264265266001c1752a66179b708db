@@ -1,0 +1,8 @@
+package learningpart2;
+
+public class Jdbc {
+	public static void main(String[] args) throws SQLException {
+		//Creating connection
+		String url = "jdb:postgresql://localhost:5432/demo";
+	}
+}

@@ -1,0 +1,61 @@
+package learning;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+//Stream is a sequence of data
+
+//An I/O Stream represents an input source or an output destination
+//including disk files. devices, other programs, and memory arrays
+
+//Streams support different types of data
+//	-simple bytes
+//	-primitive data types
+//	-localized characters
+//	-objects
+
+//stream Classes:
+/*
+ * 1 java.io.InputStream
+ * 2 java.io.OutputStream
+ * 3 java.lang.System
+ * 4 java.io.Reader
+ * 5 java.io.Writer
+ */
+
+class ByteStreamExample {
+	public void exec() throws IOException{
+		FileInputStream inStream = null;
+		FileOutputStream outStream = null;
+		System.out.println(System.getProperty("user.dir"));
+		try {
+			inStream = new FileInputStream("files/src.txt");
+			outStream= new FileOutputStream("files/dest.txt");
+			
+			//reads a byte at a time, if it reached end of the file,
+			//it returns -1
+			int content;
+			while((content = inStream.read())!=-1) {
+				outStream.write((byte) content);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		} finally {
+			if(inStream!=null) {
+				inStream.close();
+			}
+			if(outStream != null) {
+				outStream.close();
+			}
+		}
+	}
+}
+
+public class IOStreams {
+	public static void main(String[] args) throws IOException{
+		ByteStreamExample obj = new ByteStreamExample();
+		obj.exec();
+	}
+}
