@@ -7,3 +7,22 @@ Sequence Of Learning:
 5. classdemo.java
 6. interfacedemo.java
 7. inheritance.java
+
+# CollectionsFramework Directory
+Contents -> Demo>src>example
+1. First.java -> Contains List Interface with Following Classes:
+    * ArrayList
+    * Stack
+    * LinkedList and Queue
+    * ArrayDeque
+    * PriorityQueue
+2. Second.java -> Contains Set Interface with following Classes:
+    * HashSet
+    * LinkedHashSet
+    * TreeSet
+3. Third.java -> Contains Map Interface with following Classes:
+    * HashMap
+    * TreeMap
+4. Fourth.java -> Contains:
+    * Array Class
+    * Collections Class
