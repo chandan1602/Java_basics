@@ -1,6 +1,8 @@
 package example;
 
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -92,6 +94,8 @@ public class Third {
 //			System.out.println(e);
 //			System.out.println(e.getKey() + " : " + e.getValue());
 //		}
+		List<Map.Entry<String, Integer>> list = new LinkedList<Map.Entry<String,Integer>>(treemap.entrySet());
+		System.out.println("MAP TO LIST : " + list);
 		
 		//Iteration method 2
 		for (String key: treemap.keySet()) {
@@ -107,6 +111,7 @@ public class Third {
 		treemap.clear();
 		System.out.println(treemap);
 		
+		System.out.println("supercalifragilisticexpialidocious".length());
 		
 	}
 }

@@ -26,3 +26,11 @@ Contents -> Demo>src>example
 4. Fourth.java -> Contains:
     * Array Class
     * Collections Class
+
+# OOPS Directory
+Contents -> src>example; src>Encapsulation
+1. example.MainClass -> Polymorphism, Inheritance
+    * Runtime
+    * Compile time
+2. Encapsulation.intro -> Encapsulation
+3. example.Abstraction -> Abstraction
