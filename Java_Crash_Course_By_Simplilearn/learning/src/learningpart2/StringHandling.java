@@ -28,7 +28,7 @@ public class StringHandling {
 		System.out.println(s1.replace('i', '$'));
 
 		String[] arr = s1.split(" ");
-		Arrays.asList(arr).forEach(s -> System.out.println(s));
+		Arrays.asList(arr).forEach(System.out::println);
 		
 		String newS1 = s1.substring(1,5);
 		System.out.println(newS1);
