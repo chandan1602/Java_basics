@@ -62,7 +62,7 @@ import java.util.regex.Pattern;
 public class RegularExpressions {
 	public static void main(String[] args) {
 //		String regexStr = ".*[a-z][0-9]."; //true
-		String regexStr = ".*[a-z][0-9][a-z]."; //false
+		String regexStr = "batcatpat(nat"; //false
 		
 		//.means any character
 		//* means any number

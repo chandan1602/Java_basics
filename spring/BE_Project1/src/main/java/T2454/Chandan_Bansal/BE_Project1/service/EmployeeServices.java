@@ -105,10 +105,4 @@ public class EmployeeServices {
         CustomLogger.logger.info("DELETE request made! Employee deleted!");
     }
 
-
-    //ADVANCED
-    private static int MAX_THREAD_COUNT =10;
-    public void createMultipleEmployees(JSONObject object) {
-
-    }
 }

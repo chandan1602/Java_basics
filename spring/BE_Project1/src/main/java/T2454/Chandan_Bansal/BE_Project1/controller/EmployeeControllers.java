@@ -87,11 +87,16 @@ public class EmployeeControllers {
 
             JSONArray employees = object.getJSONArray("employees");
             ExecutorService executorService = Executors.newFixedThreadPool(MAX_THREAD_COUNT);
+            int i = 0;
             for( Object e: employees) {
                 JSONObject object1 = (JSONObject) e;
                 ObjectMapper objectMapper = new ObjectMapper();
+                System.out.println("Thread is started + " + object1.getString("email") + i);
                 Runnable task = new CreateEmployeeThread(employeeServices, objectMapper.readValue(object1.toString(), EmployeePostRequestAdapter.class));
                 executorService.execute(task);
+                System.out.println("Thread is closed + " + object1.getString("email") + i );
+                i++;
+
             }
             executorService.shutdown();
         } catch(Exception e) {

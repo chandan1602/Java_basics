@@ -65,7 +65,7 @@ public class NParallelStreams {
 				.limit(1_000_000)
 				.parallel() //with this 23s, without this 1m 10s
 				.filter(NParallelStreams::isPrime)
-				.peek(x -> System.out.format("%s\t",x))
+//				.peek(x -> System.out.format("%s\t",x))
 				.count();
 		System.out.println("\nTotal: " + count);
 	}
