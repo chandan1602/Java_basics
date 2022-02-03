@@ -4,6 +4,7 @@ import T2454.Chandan_Bansal.BE_Project1.adapter.EmployeePostRequestAdapter;
 import T2454.Chandan_Bansal.BE_Project1.entity.Employee;
 import T2454.Chandan_Bansal.BE_Project1.service.EmployeeServices;
 import T2454.Chandan_Bansal.BE_Project1.utils.CreateEmployeeThread;
+import T2454.Chandan_Bansal.BE_Project1.utils.CustomThreadPoolExecutor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -18,8 +19,7 @@ import java.io.DataInput;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 @RestController
 @RequestMapping("/api/v1/employee")
@@ -86,17 +86,22 @@ public class EmployeeControllers {
             JSONObject object = new JSONObject(jsonTokener);
 
             JSONArray employees = object.getJSONArray("employees");
-            ExecutorService executorService = Executors.newFixedThreadPool(MAX_THREAD_COUNT);
+            BlockingQueue<Runnable> blockingQueue = new ArrayBlockingQueue<>(10);
+//            BlockingQueue<Runnable> blockingQueue = new LinkedBlockingQueue<>();
+
+            CustomThreadPoolExecutor executorService = new CustomThreadPoolExecutor(
+                    MAX_THREAD_COUNT, MAX_THREAD_COUNT+10, 10, TimeUnit.MILLISECONDS,
+                    blockingQueue, new ThreadPoolExecutor.AbortPolicy());
             int i = 0;
+            executorService.prestartAllCoreThreads();
             for( Object e: employees) {
                 JSONObject object1 = (JSONObject) e;
                 ObjectMapper objectMapper = new ObjectMapper();
                 System.out.println("Thread is started + " + object1.getString("email") + i);
                 Runnable task = new CreateEmployeeThread(employeeServices, objectMapper.readValue(object1.toString(), EmployeePostRequestAdapter.class));
-                executorService.execute(task);
+                blockingQueue.offer(task);
                 System.out.println("Thread is closed + " + object1.getString("email") + i );
                 i++;
-
             }
             executorService.shutdown();
         } catch(Exception e) {

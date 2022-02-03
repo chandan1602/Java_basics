@@ -29,7 +29,7 @@ class DepartmentServicesTest {
     }
 
     public static Department sampleDepartment() {
-        return  Department.builder()
+        return Department.builder()
                 .setTitle("Demo")
                 .getDepartment();
     }
