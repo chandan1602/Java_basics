@@ -1,0 +1,27 @@
+package com.example.apachecommonschainDemo;
+
+import org.apache.commons.chain.Catalog;
+import org.apache.commons.chain.Command;
+import org.apache.commons.chain.Context;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class MainTest {
+    @Test
+    public void givenInputsToContext_whenAppliedChain_thenExpectedContext() throws Exception {
+        Context context = new AtmRequestContext();
+        context.put("totalAmountToBeWithdrawn", 460);
+        context.put("amountLeftToBeWithdrawn", 460);
+
+        Catalog catalog = new AtmCatalog();
+        Command atmWithdrawalChain = catalog.getCommand("atmWithdrawalChain");
+        atmWithdrawalChain.execute(context);
+
+        assertEquals(460, (int) context.get("totalAmountToBeWithdrawn"));
+        assertEquals(0, (int) context.get("amountLeftToBeWithdrawn"));
+        assertEquals(4, (int) context.get("noOfHundredsDispensed"));
+        assertEquals(1, (int) context.get("noOfFiftiesDispensed"));
+        assertEquals(1, (int) context.get("noOfTensDispensed"));
+    }
+}

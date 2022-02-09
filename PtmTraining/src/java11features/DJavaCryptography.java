@@ -1,8 +1,10 @@
 package java11features;
 
+import java.nio.charset.StandardCharsets;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
+import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.security.PublicKey;
@@ -41,6 +43,12 @@ public class DJavaCryptography {
 		
 		//save this private key
 		byte[] priKey = privatekey.getEncoded();
+		
+		MessageDigest digest = MessageDigest.getInstance("SHA-256");
+		//sampleemail1 [B@4eb7f003
+		//sampleemail@ [B@4d3167f4
+		byte[] hash = digest.digest("sampleemail@".getBytes(StandardCharsets.UTF_8));
+		System.out.println("HASH : " + hash.toString().substring(1));
 
 	}
 }
