@@ -1,0 +1,28 @@
+syntax = "proto3";
+import "schema.proto";
+package com.devproblems;
+
+option java_multiple_files = true;
+
+
+service RoutingService {
+  rpc getAuthorById(AuthorId) returns(Author);
+  rpc getBooksByAuthorId(AuthorId) returns(stream Book);
+  rpc getMostExpensiveBook(Empty) returns(BookName);
+  rpc getBooksByAuthorGender(Gender) returns(stream Book);
+}
+
+message AuthorId {
+  int32 id=1;
+}
+
+message Gender {
+  string type=1;
+}
+
+message BookName {
+  string name=1;
+  Author author=2;
+}
+
+message Empty{}

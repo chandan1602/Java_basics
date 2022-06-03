@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c9d68254-5a20-4e0e-9c31-5cf73b2ed76c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/main/java/com/example/apacheCommons/BArrayUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/main/java/com/example/apacheCommons/CNumberUtills.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/main/java/com/example/apacheCommons/DFractionUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/main/java/com/example/apacheCommons/StringUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/main/java/com/example/guavaDemo/AEvictions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/main/java/com/example/guavaDemo/BRefresh.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/main/java/com/example/guavaDemo/CThreadPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/main/java/com/example/guavaDemo/DListenableFuture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/main/java/com/example/guavaDemo/ECollections.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/main/java/com/example/guavaDemo/fstirpedlocks/AbstractFuture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/main/java/com/example/guavaDemo/fstirpedlocks/SingleLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/main/java/com/example/guavaDemo/fstirpedlocks/StripedLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/test/java/com/example/apacheCommons/BArrayUtilsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/test/java/com/example/apacheCommons/CNumberUtillsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/test/java/com/example/apacheCommons/DFractionUtilsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/test/java/com/example/apacheCommons/StringUtilsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/test/java/com/example/guavaDemo/AEvictionsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/test/java/com/example/guavaDemo/BRefreshTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/test/java/com/example/guavaDemo/CThreadPoolTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/test/java/com/example/guavaDemo/DListenableFutureTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/test/java/com/example/guavaDemo/ECollectionsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/test/java/com/example/shardingDesignPattern/Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/test/java/com/example/shardingDesignPattern/HashShardManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/test/java/com/example/shardingDesignPattern/LookupShardManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/test/java/com/example/shardingDesignPattern/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/test/java/com/example/shardingDesignPattern/RangeShardManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/test/java/com/example/shardingDesignPattern/Shard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring/multipleDemos/src/test/java/com/example/shardingDesignPattern/ShardManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CollectionsFramework/Demo/src/example/Third.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CollectionsFramework/Demo/src/example/Third.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java_advanced/topics.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring/jpademo/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring/jpademo/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring/jpademo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring/jpademo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring/multipleDemos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring/multipleDemos/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="25gONF0mRNqsOWkOx7l0SwdaJhv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c9d68254-5a20-4e0e-9c31-5cf73b2ed76c" name="Changes" comment="" />
+      <created>1645945221197</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645945221197</updated>
+    </task>
+    <servers />
+  </component>
+</project>

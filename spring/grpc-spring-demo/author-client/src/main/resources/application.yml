@@ -1,0 +1,11 @@
+grpc:
+  client:
+    grpc-devproblems-service:
+      address: static://localhost:9000
+      negotiationType: plaintext
+
+  server:
+    port: 9001
+
+server:
+  port: 8081

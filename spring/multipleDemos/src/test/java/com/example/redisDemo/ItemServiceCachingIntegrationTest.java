@@ -39,20 +39,20 @@ public class ItemServiceCachingIntegrationTest {
     @Autowired
     private CacheManager cacheManager;
 
-    @Test
-    void givenRedisCaching_whenFindItemById_thenItemReturnedFromCache() {
-        String id = "n32hde34",
-               name = "temp user 1";
-        User user = new User(id, name, 20000L);
-        given(mockUserRepository.findById(id))
-                .willReturn(user);
-        User userCacheMiss = userService.getUserById(id);
-        User userCacheHit = userService.getUserById(id);
-
-        assertThat(userCacheMiss.getId()).isEqualTo(user.getId());
-        assertThat(userCacheHit).isEqualTo(user);
-
-        verify(mockUserRepository, times(1)).findById(id);
-
-    }
+//    @Test
+//    void givenRedisCaching_whenFindItemById_thenItemReturnedFromCache() {
+//        String id = "n32hde34",
+//               name = "temp user 1";
+//        User user = new User(id, name, 20000L);
+//        given(mockUserRepository.findById(id))
+//                .willReturn(user);
+//        User userCacheMiss = userService.getUserById(id);
+//        User userCacheHit = userService.getUserById(id);
+//
+//        assertThat(userCacheMiss.getId()).isEqualTo(user.getId());
+//        assertThat(userCacheHit).isEqualTo(user);
+//
+//        verify(mockUserRepository, times(1)).findById(id);
+//
+//    }
 }
